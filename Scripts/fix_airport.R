@@ -7,7 +7,7 @@ colClasses <- c ('integer', 'integer', 'integer', 'integer', 'factor',
                  'integer', 'factor', 'character', 'character', 
                  'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 
                  'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL')
-dfFlights <- read.csv ("C:/Users/megar/OneDrive/Documenten/Business Analytics Management/Exchange/Course/Predictive Analytics/Group assignment/DBA3803/Data/flights_old.csv")
+dfFlights <- read.csv("C:/Users/megar/OneDrive/Documenten/Business Analytics Management/Exchange/Course/Predictive Analytics/Group assignment/DBA3803/Data/flights.csv")
 
 
 
@@ -22,7 +22,7 @@ cat ("UNMATCHED ORIGIN AIRPORTS: ", length (setdiff (origin_airports, airport_lo
 cat ("UNMATCHED DESTINATION AIRPORTS: ", length (setdiff (destination_airports, airport_lookup)))
 
 
-setwd("C:/Users/megar/OneDrive/Documenten/Business Analytics Management/Exchange/Course/Predictive Analytics/Group assignment/DBA3803D/Data")
+setwd("C:/Users/megar/OneDrive/Documenten/Business Analytics Management/Exchange/Course/Predictive Analytics/Group assignment/DBA3803D/Data/")
 
 # find working directory
 getwd()
@@ -111,4 +111,4 @@ dfFlights %>%
 
 
 # save the csv file with the updated airport codes
-write.csv (dfFlights, "Data/flights_withcode.csv", row.names=FALSE)
+write.csv (dfFlights, "Data/flights_final.csv", row.names=FALSE)
